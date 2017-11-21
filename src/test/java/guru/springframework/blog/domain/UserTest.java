@@ -32,7 +32,7 @@ public class UserTest {
 
     }
 
-    @Test
+    /*@Test
     public void DeserializeUsingJacksonMixinAnnotationTest() throws IOException {
         ObjectMapper objectMapper = buildMapperForDeserialize();
         System.out.println("Hiiiii");
@@ -49,7 +49,7 @@ public class UserTest {
         User user1 = objectMapper.readValue(json, User.class);
         System.out.println("Hiiiii");
         System.out.println(user1);
-    }
+    }*/
     private static ObjectMapper buildMapper(){
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.setVisibilityChecker(objectMapper.getSerializationConfig()
@@ -61,7 +61,7 @@ public class UserTest {
         return objectMapper;
     }
 
-    private static ObjectMapper buildMapperForDeserialize(){
+    /*private static ObjectMapper buildMapperForDeserialize(){
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.setVisibilityChecker(objectMapper.getDeserializationConfig()
                 .getDefaultVisibilityChecker()
@@ -71,5 +71,5 @@ public class UserTest {
                 .withSetterVisibility(JsonAutoDetect.Visibility.NONE)
                 .withCreatorVisibility(JsonAutoDetect.Visibility.NONE));
         return objectMapper;
-    }
+    }*/
 }
